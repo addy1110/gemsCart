@@ -4,8 +4,9 @@
     app.controller('StoreController', [ '$http', function($http){
         var store = this;
         store.products = [];
+        
         console.log("no item");
-        $http.get('/Users/ADDY/Google Drive/github/gemsCart/store-products.json').success(function(data){
+        $http.get('store-products.json').success(function(data){
             store.products=data;
             console.log(data);
         });
