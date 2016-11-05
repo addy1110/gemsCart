@@ -22,6 +22,13 @@
         };
     });
 
+    app.directive("productTitle", function() {
+        return {
+            restrict:"A",
+            templateUrl: "product/product-title.html"
+        };
+    });
+
     app.directive("productTabs", function() {
         return {
             restrict: "E",
