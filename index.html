@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html ng-app="gemStore">
-
-
 <head>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="mystyle.css" />
     <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="products.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="product.js"></script>
 </head>
-
 
 <body ng-controller="StoreController as store">
     <!--  Store Header  -->
@@ -22,18 +18,15 @@
     <div class="list-group">
         <!--  Product Container  -->
         <div class="list-group-item" ng-repeat="product in store.products">
-            <!--<h3 ng-include="'product-title.html'"></h3>-->
-            <!--<product-title> </product-title> element directive-->
-            <h3 product-title></h3> <!-- attribute directive -->
+            <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
 
             <!-- Image Gallery  -->
-            <product-gallery> </product-gallery>
+            <product-gallery></product-gallery>
 
-            <!-- Product Tabs -->
+            <!-- Product Tabs  -->
             <product-tabs></product-tabs>
-
-
         </div>
+
     </div>
 </body>
 </html>
